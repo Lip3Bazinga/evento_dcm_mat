@@ -19,31 +19,46 @@
       li
         position: relative // Adicionado para que o ::after seja posicionado corretamente em relação ao item da lista
 
+        .active_link::after
+          content: ''
+          position: absolute
+          bottom: -2rem
+          left: 50%
+          transform: translateX(-50%)
+          width: 0%
+          height: .5rem
+          border-radius: .8rem
+          background: var(--black)
+          transition: all .7s ease-in-out
+          opacity: 0
+
         a.link
           font-size: 1.8rem
           font-weight: 600
           position: relative
           color: var(--white)
 
+
+
           &::after
             content: ''
             position: absolute
-            bottom: -0.5rem
+            bottom: -2rem
             left: 50%
             transform: translateX(-50%)
             width: 0%
             height: .5rem
             border-radius: .8rem
             background: var(--black)
-            transition: all .4s ease-in-out
+            transition: all .7s ease-in-out
             opacity: 0
 
           &:hover
             opacity: .8
 
-      &:hover a::after
-        width: 100%
-        opacity: 1
+        &:hover a::after
+          width: 100%
+          opacity: 1
 
       div
         position: relative

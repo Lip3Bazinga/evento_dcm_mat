@@ -1,7 +1,7 @@
 import styles from './styles.module.sass'
-import sbm_logo from '../../../../../public/assets/images/sbm_logo.png'
-import sbem_logo from '../../../../../public/assets/images/sbem_logo.png'
-import usp_logo from '../../../../../public/assets/images/usp_logo.gif'
+import sbm_logo from '@/../public/assets/images/sbm_logo.png'
+import sbem_logo from '@/../public/assets/images/sbem_logo.png'
+import usp_logo from '@/../public/assets/images/usp_logo.gif'
 
 import Image from 'next/image'
 
