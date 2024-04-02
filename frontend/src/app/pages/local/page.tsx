@@ -1,24 +1,35 @@
-import { Suspense } from "react"
-import Loading from '../../loading'
-import styles from './styles.module.sass'
-import Head from "next/head"
-import Map from "@/components/MapComponents/Map"
+import Head from 'next/head';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import 'leaflet/dist/leaflet.css'; // Importe os estilos do Leaflet
 
-const local = () => {
-  return(
+import styles from '@styles/Home.module.scss';
+
+const DEFAULT_CENTER = [38.907132, -77.036546]
+
+export default function Local() {
+  return (
     <>
       <Head>
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossOrigin=""/>
+        <title>Local</title>
+        <meta name="description" content="Local Page" />
       </Head>
-      <Suspense fallback={<Loading />}>
-        <div className={styles.container}>
-          <Map
-           position={[0 , 0]}
-          />
-        </div>
-      </Suspense>
-    </>
-  )
-}
 
-export default local
+      <div className={styles.container}>
+        <h1>Local</h1>
+        <div className={styles.mapContainer}>
+          <MapContainer center={DEFAULT_CENTER} zoom={13} style={{ height: '400px', width: '100%' }}>
+            <TileLayer
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
+            />
+            <Marker position={DEFAULT_CENTER}>
+              <Popup>
+                A pretty CSS3 popup. <br /> Easily customizable.
+              </Popup>
+            </Marker>
+          </MapContainer>
+        </div>
+      </div>
+    </>
+  );
+}
