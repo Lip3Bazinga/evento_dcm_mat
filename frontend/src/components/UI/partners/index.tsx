@@ -7,14 +7,20 @@ import Image from 'next/image'
 const partners = () => {
   return(
     <section className={styles.partners}>
+      <hr></hr>
       <div>
+        <h3>Realização</h3>
         <Image src={sbm_logo} alt="logo 1" />
       </div>
+      <hr></hr>
       <div>
-        <Image src={sbem_logo} alt="logo 1" />
+        <h3>Organização</h3>
+        <Image src={sbem_logo} alt="logo 2" />
       </div>
+      <hr></hr>
       <div>
-        <Image src={usp_logo} alt="logo 1" />
+        <h3>Apoio</h3>
+        <Image src={usp_logo} alt="logo 3" />
       </div>
     </section>
   )

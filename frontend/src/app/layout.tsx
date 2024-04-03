@@ -1,14 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@/globals.sass";
-<<<<<<< Updated upstream
 import Header from '@/components/UI/header'
 import Partners from '@/components/UI/partners'
 
-=======
-import Header from "@/components/UI/header";
-import Partners from "@/components/UI/partners";
->>>>>>> Stashed changes
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -25,11 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Header />
-<<<<<<< Updated upstream
           {children}
-=======
-        {children}
->>>>>>> Stashed changes
         <Partners />
       </body>
     </html>

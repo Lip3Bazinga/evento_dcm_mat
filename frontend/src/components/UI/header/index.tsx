@@ -15,6 +15,7 @@ const header = () => {
 
   return(
     <header className={styles.header}>
+      <h2>Logo<span>Marca</span></h2>
       <nav>
         <button onClick={() => setIsOpenMenu(!isOpenMenu)}>
           {
