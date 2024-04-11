@@ -10,17 +10,8 @@
   align-items: center
   background: var(--blue)
 
-  h2
-    font-size: 3rem
-    font-weight: 600
-    color: var(--white)
-
-    span
-      font-size: 3rem
-      font-weight: 700
-      color: lightblue
-
   nav
+
     button
       display: none
       visibility: hidden
@@ -51,6 +42,7 @@
           font-weight: 600
           position: relative
           color: var(--white)
+          transition: all .7s ease-in-out
 
           &::after
             content: ''
@@ -61,12 +53,12 @@
             width: 0%
             height: .5rem
             border-radius: .8rem
-            background: var(--black)
+            background: var(--white)
             transition: all .7s ease-in-out
             opacity: 0
 
           &:hover
-            opacity: .8
+            opacity: 1
 
         &:hover a::after
           width: 100%
