@@ -14,8 +14,6 @@ import marcela from "../../../../../public/assets/images/comite/marcela_luciano.
 
 import Image from 'next/image'
 
-
-
 const comite = () => {
 
   return (
@@ -73,8 +71,8 @@ const comite = () => {
             <p>UNESP</p>
           </div>
         </section>
+        <h2 className={styles.title}>Comitê científico</h2>
         <section>
-          <h2 className={styles.title}>Comitê científico</h2>
           <div>
             <div>
               <Image src={jaqueline} alt="person"/>

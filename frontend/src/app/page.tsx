@@ -1,7 +1,10 @@
 import Header from "@/components/UI/header";
+import Partners from "@/components/UI/partners";
+
 import banner from "../../public/assets/images/banner.jpeg"
 import usp from "../../public/assets/images/usp_logo.gif"
-import Partners from "@/components/UI/partners";
+import calendario from "../../public/assets/calendar-outline.svg"
+
 import Image from 'next/image'
 import styles from './styles.module.sass'
 
@@ -21,10 +24,12 @@ export default function Home() {
         <Image src={usp} alt="Logo da USP" />
         <p>
           Universidade de São Paulo
-          <br></br>
           São paulo, Ribeirão Preto
           <br></br>
-          10,11 e 12 de junho de 2023
+          <span>
+            <Image src={calendario} alt="Calendário" />
+            26, 27 de julho de 2024  
+          </span>
         </p>
       </div>
       <div className={styles.content}>

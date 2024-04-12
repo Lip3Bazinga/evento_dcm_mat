@@ -55,10 +55,24 @@
       gap: 1rem
       padding-top: 1rem
       font-size: 3rem
-      max-width: 70%
       font-weight: 600
       font-size: 1.8rem
       text-align: justify
+      display: flex
+      justify-content: center
+      align-items: center
+      flex-direction: column
+
+      span
+        position: relative
+        display: flex
+        align-items: center
+        gap: 1rem
+        color: var(--blue)
+
+        img
+          width: 3rem
+          height: 3rem
 
   .content
     width: 90vw
@@ -79,7 +93,7 @@
     .contentImage
       position: relative
       width: 50%
-      height: 40rem
+      height: 50rem
 
       img
         position: absolute
@@ -89,3 +103,24 @@
         height: 100%
         object-fit: cover
         border-radius: .5rem
+
+@media (max-width: 1000px)
+  .main
+
+    .container
+      flex-direction: column
+      align-items: center
+
+      p
+        text-align: center
+        margin: 0 auto
+
+    .content
+      flex-direction: column
+      gap: 4rem
+
+      .contentInfo
+        width: 90%
+
+      .contentImage
+        width: 100%

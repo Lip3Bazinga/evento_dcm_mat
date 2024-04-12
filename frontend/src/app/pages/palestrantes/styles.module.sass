@@ -4,30 +4,32 @@
   display: flex
   justify-content: center
   align-items: center
+  background: var(--black)
 
-  div
-    width: 100%
+  .card
+    position: relative
+    width: 55rem
     height: 45rem
+    border-radius: .5rem
+    background: var(--lightgreen)
     display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: flex-start
     gap: 2rem
 
-    & > div 
-      width: 35rem
-      height: 45rem
-      background: rgba(255, 255, 255, 0.12)
-      border-radius: 16px
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1)
-      backdrop-filter: blur(5px)
-      -webkit-backdrop-filter: blur(5px)
-      border: 1px solid rgba(255, 255, 255, 0.3)
+    .content
+      width: 90%
       display: flex
+      align-items: center
       flex-direction: column
       gap: 2rem
 
-      div
+      .contentImage
+        margin-top: -10rem
         position: relative
-        width: 10rem
-        height: 10rem
+        width: 15rem
+        height: 15rem
 
         img
           position: absolute
@@ -37,13 +39,32 @@
           height: 100%
           object-fit: cover
           border-radius: 50%
+          border: .5rem solid var(--black)
+
+      .contentInfo
+        display: flex
+        justify-content: center
+        flex-direction: column
+        align-items: center
 
         h2
-          font-size: 2rem
+          text-align: center
+          font-size: 2.5rem
           color: var(--blue)
-          font-weight: 600
 
         p
-          font-size: 1.6rem
-          color: var(--black)
+          text-align: center
+          width: 90%
+          font-size: 1.5rem
           font-weight: 600
+          color: var(--white)
+
+    h2
+      font-size: 1.7rem
+      color: var(--blue)
+
+    p
+      color: var(--white)
+      font-size: 1.5rem
+      width: 90%
+      font-weight: 600
