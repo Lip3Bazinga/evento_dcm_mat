@@ -10,7 +10,6 @@ const images = {
   tiktok : require("@/../public/assets/images/logo-tiktok.svg"),
   whatsApp : require("@/../public/assets/images/logo-whatsapp.svg"),
   telefone : require("@/../public/assets/images/call-outline.svg"),
-
 }
 
 const faleConosco = () => {

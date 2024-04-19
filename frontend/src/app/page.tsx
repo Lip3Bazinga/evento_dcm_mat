@@ -1,7 +1,7 @@
 import Header from "@/components/UI/header";
 import Partners from "@/components/UI/partners";
 
-import banner from "../../public/assets/images/banner.jpeg"
+import banner from "../../public/assets/images/lago-3.png"
 import usp from "../../public/assets/images/usp_logo.gif"
 import calendario from "../../public/assets/calendar-outline.svg"
 
@@ -34,7 +34,7 @@ export default function Home() {
       </div>
       <div className={styles.content}>
         <div className={styles.contentInfo}>
-          <h1>Evento da teoria espectral de grafos</h1>
+          <h1>Sobre o evento: </h1>
           <p>
             Este evento é uma iniciativa conjunta da Sociedade Brasileira de Matemática (SBM), da
             Sociedade Brasileira de Educação Matemática (SBEM) e da Associação Nacional dos
