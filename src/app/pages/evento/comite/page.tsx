@@ -19,6 +19,27 @@ const comite = () => {
   return (
     <Suspense fallback={<Loading />}>
       <div className={styles.container}>
+      <h2 className={styles.title}>Comitê científico</h2>
+        <section>
+          <div>
+            <div>
+              <Image src={jaqueline} alt="person"/>
+            </div>
+            <h2>Jaqueline Godoy Mesquita</h2>
+          </div>
+          <div>
+            <div>
+              <Image src={claudia} alt="person"/>
+            </div>
+            <h2>Claudia Lisete Oliveira Groenwald</h2>
+          </div>
+          <div>
+            <div>
+              <Image src={marcela} alt="person"/>
+            </div>
+            <h2>Marcela Luciano Vilela de Souza</h2>
+          </div>
+        </section>
         <h2 className={styles.title}>Comissão organizadora</h2>
         <section>
           <div>
@@ -69,27 +90,6 @@ const comite = () => {
             </div>
             <h2>Marta Cilene Gadotti</h2>
             <p>UNESP</p>
-          </div>
-        </section>
-        <h2 className={styles.title}>Comitê científico</h2>
-        <section>
-          <div>
-            <div>
-              <Image src={jaqueline} alt="person"/>
-            </div>
-            <h2>Jaqueline Godoy Mesquita</h2>
-          </div>
-          <div>
-            <div>
-              <Image src={claudia} alt="person"/>
-            </div>
-            <h2>Claudia Lisete Oliveira Groenwald</h2>
-          </div>
-          <div>
-            <div>
-              <Image src={marcela} alt="person"/>
-            </div>
-            <h2>Marcela Luciano Vilela de Souza</h2>
           </div>
         </section>
       </div>
