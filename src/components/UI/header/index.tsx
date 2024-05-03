@@ -2,26 +2,38 @@
 
 import Link from 'next/link'
 import styles from './styles.module.sass'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import open_menu_icon from '@/../public/assets/images/menu-outline.svg'
 import close_menu_icon from '@/../public/assets/images/close-outline.svg'
 import Image from 'next/image'
 
-const header = () => {
-
-  const [isOpenLink, setIsOpenLink] = useState(true)
+const Header = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [isOpenLink, setIsOpenLink] = useState(true)
   const [isSelectedLink, setIsSelectedLink] = useState(true)
 
-  return(
-    <header className={styles.header}>
+  useEffect(() => {
+    // Adiciona um event listener para o evento de rolagem quando o componente monta
+    window.addEventListener('scroll', handleScroll)
+    // Remove o event listener quando o componente desmonta para evitar vazamentos de memória
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
+  const handleScroll = () => {
+    const scrolled = window.scrollY > 0
+    setIsScrolled(scrolled)
+  }
+
+  const headerClassName = isScrolled ? `${styles.header} ${styles.header_scroll}` : styles.header
+
+  return (
+    <header className={headerClassName}>
       <nav>
         <button onClick={() => setIsOpenMenu(!isOpenMenu)}>
-          {
-            isOpenMenu
-            ? <Image src={close_menu_icon} alt='Ícone para fechar menu'/>
-            : <Image src={open_menu_icon} alt='Ícone para abrir menu'/>
-          }
+          <Image src={isOpenMenu ? close_menu_icon : open_menu_icon} alt='Ícone para alternar menu' />
         </button>
         <ul className={isOpenMenu ? styles.active : ''}>
           <li><Link href="/" className={styles.link}>Home</Link></li>
@@ -37,7 +49,7 @@ const header = () => {
                 <div>
                   <div>
                     <Link href="/pages/evento/comite">Comitê</Link>
-                    <Link href="/pages/evento/cronograma">Cronograma</Link>
+                    <Link href="/pages/evento/programacao">Programação</Link>
                     <Link href="/pages/evento/cartaz">Cartaz</Link>
                   </div>
                 </div>
@@ -58,4 +70,4 @@ const header = () => {
   )
 }
 
-export default header
+export default Header

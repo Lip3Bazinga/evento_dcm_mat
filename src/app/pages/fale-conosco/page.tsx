@@ -28,16 +28,6 @@ const faleConosco = () => {
             <h2>Mais dúvidas?</h2>
             <p><span>Telefone:</span>(11)97657-1580</p>
           </div>
-          <div>
-            <p>Fique por dentro das nossas redes sociais para não perder nenhuma informação sobre o evento</p>
-            <ul>
-              {Object.entries(images).map(([name, src]) => (
-                <li key={name} >
-                  <Image src={src.default} alt={name} />
-                </li>
-              ))}
-            </ul>
-          </div>
         </main>
       </div>
 

@@ -1,102 +1,76 @@
-.main
+.modalChildren
+  text-align: center
+
+  h1
+    font-size: 5rem
+    color: var(--white)
+    margin: 2rem
+
+  h2
+    font-size: 3rem
+    color: var(--white)
+    margin-bottom: 2rem
+
+  p
+    margin: 2rem
+    text-align: justify
+    color: var(--white)
+
+.container
   width: 100vw
-  height: 100vh
-  display: flex
-  justify-content: center
-  align-items: center
+  height: 100%
+  text-align: center
   background: var(--black)
+  overflow-y: scroll
 
-  .container
-    position: relative
-    margin: 0 auto
-    width: 90%
-    height: 65rem
-    overflow-x: scroll
+  section
     display: flex
-    justify-content: center
     align-items: center
-    gap: 2rem
+    justify-content: center
+    flex-direction: column
+    padding-top: 4rem
+    width: 100%
 
-    &::-webkit-scrollbar
-      width: 1rem
-      border-radius: 1rem
-    &::-webkit-scrollbar-track
-      background: var(--blue)
-      border-radius: 1rem
+    h1
+      color: var(--white)
+      font-size: 8rem
+      padding: 2rem
+      margin-top: 2rem
 
-    &::-webkit-scrollbar-thumb
-      border-radius: 20px
-      border: 3px solid var(--white)
-      background-color: var(--lightgreen)
-
-    .card
-      position: relative
-      min-width: 35rem
-      height: 50rem
-      border-radius: .5rem
-      background: var(--lightgreen)
+    div
+      width: 100%
+      height: 100%
       display: flex
-      flex-direction: column
+      flex-direction: row
       align-items: center
-      justify-content: flex-start
-      gap: 2rem
+      justify-content: center
 
-      .content
-        width: 100%
-        display: flex
-        align-items: center
-        flex-direction: column
-        gap: 2rem
+      section
+        padding-top: 0
 
-        .contentImage
-          margin-top: -6rem
-          position: relative
-          width: 15rem
-          height: 15rem
+        h2
+          font-size: 4rem
+          color: var(--white)
 
-          img
-            position: absolute
-            top: 0
-            left: 0
-            width: 100%
-            height: 100%
-            object-fit: cover
-            border-radius: 50%
-            border: .5rem solid var(--black)
-
-        .contentInfo
-          width: 100%
+        div
           display: flex
-          justify-content: center
-          flex-direction: column
-          align-items: center
+          margin-bottom: 5rem
 
-          h2
-            text-align: center
-            font-size: 2.5rem
-            color: var(--blue)
-            text-shadow: 2px 1px 1px var(--black)
+          .card
+            & :hover
+              background-color: var(--lightgray)
 
-          p
-            text-align: center
-            width: 90%
-            font-size: 1.5rem
-            font-weight: 600
-            color: var(--white)
+          section
+            background-color: var(--white)
+            width: 26rem
+            height: 15rem
+            border-left: 1rem solid var(--blue)
+            margin: 3rem
+            border-radius: 0.5rem
+            cursor: pointer
 
-            span
+            h2
               color: var(--black)
-
-      h2
-        text-align: center
-        font-size: 1.7rem
-        color: var(--dark)
-
-      .desc
-        color: var(--white)
-        font-size: 1.3rem
-        width: 90%
-        font-weight: 600
-
-        &::first-letter
-          padding-left: 1.5rem
+              font-size: 1.97rem
+              margin-left: 1rem
+              margin-right: 1rem

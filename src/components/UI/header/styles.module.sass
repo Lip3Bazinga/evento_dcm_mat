@@ -4,11 +4,16 @@
   left: 0
   z-index: 1000000
   width: 100vw
-  height: 6rem
   display: flex
   justify-content: space-around
   align-items: center
-  background: var(--blue)
+  background: rgba(0,0,0,0.4)
+  padding: 4rem 0rem
+  transition: all .4s ease-in-out
+
+  &.header_scroll
+    padding: 1.5rem 0rem
+    background: var(--blue)
 
   nav
 
@@ -44,6 +49,9 @@
           color: var(--white)
           transition: all .7s ease-in-out
 
+          &:hover
+            color: var(--blue)
+
           &::after
             content: ''
             position: absolute
@@ -51,7 +59,7 @@
             left: 50%
             transform: translateX(-50%)
             width: 0%
-            height: .5rem
+            height: .3rem
             border-radius: .8rem
             background: var(--white)
             transition: all .7s ease-in-out
@@ -128,6 +136,7 @@
         justify-content: center
         align-content: center
         z-index: 100000
+        gap: 3rem
 
         li
           display: flex

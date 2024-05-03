@@ -32,6 +32,18 @@ const comoChegar = () => {
             </span>
           </li>
           <li>Ônibus urbano: Incluir linhas de ônibus que chegam até o campus.</li>
+          <li>
+            Os ônibus circulares dentro do campus são gratuitos e facilitam o transporte e
+            locomoção dentro do Campus. O serviço é oferecido de segunda a sexta-feira, das 6
+            às 24 horas e, aos sábados, das 8 às 17 horas.
+            Horários do circular no site da Prefeitura do Campus USP de Ribeirão Preto:
+            <span>
+              <a href="http://www.prefeiturarp.usp.br/" target="_blank">
+                Horários
+              </a>
+            </span>
+
+          </li>
         </ul>
       </main>
     </Suspense>

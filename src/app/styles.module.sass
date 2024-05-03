@@ -10,24 +10,62 @@
   .banner
     position: relative
     width: 100vw
-    height: 80vh
+    height: 100vh
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
 
     h2
-      width: 90%
-      font-size: 3rem
-      position: absolute
-      top: 50%
-      left: 50%
-      max-width: 75rem
-      transform: translate(-50%,-50%)
+      max-width: 125rem
+      font-size: 6rem
       z-index: 1000
       color: var(--white)
-      text-shadow: 3px 1px 1px black
+      text-shadow: 3px 1px 1px var(--black)
+      text-align: center
+
+    > p
+      position: relative
+      font-size: 3rem
+      color: var(--white)
+      z-index: 1000
+      font-weight: 600
+      padding: 1rem
+      margin-top: 2rem
+      display: flex
+      justify-content: center
+      align-items: center
+
+    .date
+      margin-top: 2rem
+      position: relative
+      z-index: 10000
+      width: 35rem
+      height: 5rem
+      background: #FFA700
+      padding: 1rem
+      display: flex
+      justify-content: center
+      align-items: center
+      gap: 1rem
 
       span
-        margin-left: 1rem
-        font-size: 3rem
-        color: var(--blue)
+        position: relative
+        width: 5rem
+        height: 5rem
+
+        img
+          position: absolute
+          top: 0
+          left: 0
+          width: 100%
+          height: 100%
+          object-fit: cover
+
+      .info_date
+        font-size: 2.5rem
+        font-weight: 600
+        color: var(--black)
 
     img
       position: absolute
@@ -39,48 +77,17 @@
 
     div
       position: absolute
+      top: 0
+      left: 0
       width: 100%
       height: 100%
-      background: rgba(0,0,0,0.1)
-
-  .container
-    margin-block: 5rem
-    display: flex
-    width: 100%
-    justify-content: center
-    align-items: center
-
-    img
-      width: 35rem
-      height: 10rem
-      object-fit: contain
-
-    p
-      gap: 1rem
-      padding-top: 1rem
-      font-size: 3rem
-      font-weight: 600
-      font-size: 1.8rem
-      text-align: justify
-      display: flex
-      justify-content: center
-      align-items: center
-      flex-direction: column
-
-      span
-        position: relative
-        display: flex
-        align-items: center
-        gap: 1rem
-        color: var(--blue)
-
-        img
-          width: 3rem
-          height: 3rem
+      background: rgba(0,0,0,0.5)
 
   .content
+    padding-block: 10rem
     width: 90vw
     margin: 0 auto
+    gap: 2rem
     display: flex
     justify-content: center
     align-items: center
@@ -93,6 +100,10 @@
 
       p
         font-size: 2rem
+        text-align: justify
+
+        &::first-letter
+          padding-left: 2rem
 
     .contentImage
       position: relative
