@@ -16,6 +16,7 @@ const comoChegar = () => {
     <Suspense fallback={<Loading />}>
       <main className={styles.container}>
       <h1>Como chegar</h1>
+      <p>XXXX</p>
       <h2>Transporte Urbano</h2>
       <ul>
           <li>

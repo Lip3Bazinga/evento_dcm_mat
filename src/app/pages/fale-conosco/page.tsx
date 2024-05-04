@@ -22,11 +22,11 @@ const faleConosco = () => {
           <h1>Fale conosco</h1>
           <div>
             <h2>Entre em contato</h2>
-            <p><span>Email:</span>filipepio2005@hotmail.com</p>
+            <p><span>Email:</span>evento_fpmat@usp.br</p>
           </div>
           <div>
             <h2>Mais dúvidas?</h2>
-            <p><span>Telefone:</span>(11)97657-1580</p>
+            <p><span>Telefone:</span>(16) 3315-0566</p>
           </div>
         </main>
       </div>
