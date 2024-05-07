@@ -9,41 +9,38 @@ import Image from 'next/image'
 
 const partners = () => {
   return(
-    <section className={styles.partners}>
-      <hr></hr>
-      <div className={styles.contentImages}>
-        <h3 className={styles.title}>
-        Organização
-        </h3>
-        <div>
-          <Image src={usp_logo} alt="logo 3" />
-        </div>
-        <div>
-          <Image src={logo_dcm} alt="logo 3" />
-        </div>
+<section className={styles.partners}>
+  <div className={styles.contentImages}>
+    <h3 className={styles.title}>Organização</h3>
+    <div className={styles.containerImages}>
+      <div className={styles.logoWrapper}>
+        <Image src={usp_logo} alt="Logo da Universidade de São Paulo" />
       </div>
-      <hr></hr>
-      <div>
-        <h3>Realização</h3>
-        <div>
-          <Image src={sbem_logo} alt="logo 2" />
-        </div>
+      <div className={styles.logoWrapper}>
+        <Image src={logo_dcm} alt="Logo do Departamento de Computação e Matemática" />
       </div>
-      <hr></hr>
-      <div>
-        <h3>Realização</h3>
-        <div>
-          <Image src={sbm_logo} alt="logo 1" />
-        </div>
-      </div>
-      <hr></hr>
-      <div>
-        <h3>Realização</h3>
-        <div>
-          <Image src={anpmat_logo} alt="logo 3" />
-        </div>
-      </div>
-    </section>
+    </div>
+  </div>
+  <div className={styles.contentImages}> 
+    <h3>Realização</h3>
+    <div className={styles.logoWrapper}>
+      <Image src={sbem_logo} alt="Logo da SBEM" />
+    </div>
+  </div>
+  <div className={styles.contentImages}>
+    <h3>Realização</h3>
+    <div className={styles.logoWrapper}>
+      <Image src={sbm_logo} alt="Logo da SBM" />
+    </div>
+  </div>
+  <div className={styles.contentImages}>
+    <h3>Realização</h3>
+    <div className={styles.logoWrapper}>
+      <Image src={anpmat_logo} alt="logo 3" />
+    </div>
+  </div>
+</section>
+
   )
 } 
 export default partners

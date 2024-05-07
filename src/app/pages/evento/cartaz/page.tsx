@@ -13,7 +13,7 @@ const cartaz = () => {
 
         <h1>Baixar PDF do cartaz</h1>
 
-        <a href="./cartaz.pdf" download>
+        <a href="./cartaz.pdf" download="cartaz.pdf">
           <Image src={preview} alt="Amostra do cartaz do evento" />
         </a>
 

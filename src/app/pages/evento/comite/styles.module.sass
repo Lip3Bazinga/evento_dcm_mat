@@ -1,14 +1,20 @@
 .container
   width: 100vw
-  height: 100vh
+  min-height: 100vh
   display: flex
+  flex-wrap: wrap
   justify-content: center
   align-items: center
-  gap: 10rem
   background-color: var(--black)
+  gap: 10rem
+  padding: 2rem
 
   ul
-    height: 35rem
+    padding-top: 12rem
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
 
     .title
       color: var(--white)
@@ -18,3 +24,13 @@
       font-size: 2rem
       padding-left: 2rem
       color: var(--lightgray)
+
+@media (max-width: 450px)
+  .container
+
+    .title
+      font-size: 2rem
+      text-align: center
+
+    li
+      text-align: center
